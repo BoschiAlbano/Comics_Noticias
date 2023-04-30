@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Menu from "../components/menu"
 import React, { useState, Suspense, useEffect, useRef } from "react"
-import _UseRef from '../components/home/useRef'
+// import _UseRef from '../components/home/useRef'
 
 const Home = () => {
 
