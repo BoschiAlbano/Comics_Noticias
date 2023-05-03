@@ -21,3 +21,7 @@ body::-webkit-scrollbar-thumb{
 body{
     background: rgb(51,65,85);
 }
+
+#id{
+    background-color: #414141;
+}
