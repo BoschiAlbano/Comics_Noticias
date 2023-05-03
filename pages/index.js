@@ -8,15 +8,18 @@ const Home = () => {
   const [pagina, setPagina] = useState(0);
 
   /*[cargar componentes dinamicamente]*/
-  const Tutoriales = React.lazy(
-    () => import('../components/home/tutoriales')
+  const Comic = React.lazy(
+    () => import('../components/LinkPage/Comic')
   )
-  const UseRef = React.lazy(
-    () => import('../components/home/useRef')
+    const Noticia = React.lazy(
+    () => import('../components/LinkPage/Noticias')
   )
-  const Masonic = React.lazy(
-    () => import('../components/home/Masonic')
-  )
+  // const UseRef = React.lazy(
+  //   () => import('../components/home/useRef')
+  // )
+  // const Masonic = React.lazy(
+  //   () => import('../components/home/Masonic')
+  // )
 
   useEffect(() => {
     console.log("Efecto del pagina Home, Pagina: "+ pagina)
@@ -30,7 +33,7 @@ const Home = () => {
           <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="w-full h-auto ">
+      <div className="w-full h-[auto]">
         <div className="m-3 rounded-t">
 
           <div className="">
@@ -40,9 +43,10 @@ const Home = () => {
           <div className="bg-[rgb(15,23,42)] h-full px-6 rounded-t-xl mx-1 flex flex-col items-center">
             
             <Suspense fallback={null}>
-              {pagina == 0 && <Tutoriales/>}
-              {pagina == 1 && <UseRef/>}
-              {pagina == 2 && <Masonic/>}
+              {pagina == 0 && <Comic/>}
+              {pagina == 1 && <Noticia/>}
+              {/* {pagina == 1 && <UseRef/>} */}
+              {/* {pagina == 2 && <Masonic/>} */}
             </Suspense>
           </div>
           

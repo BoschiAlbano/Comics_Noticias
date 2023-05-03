@@ -4,9 +4,9 @@ import {FaRegNewspaper} from 'react-icons/fa'
 import {ImImages} from 'react-icons/im'
 
 const Items = [
-    {nombre: "Home", icon: IoHomeOutline, dis: "translate-x-0", ruta: "/"},
-    {nombre: "Comic", icon: ImImages, dis: "translate-x-16", ruta: "/noticias"},
-    {nombre: "Noticias", icon: FaRegNewspaper, dis: "translate-x-32", ruta: "/Masonic"}
+    // {nombre: "Home", icon: IoHomeOutline, dis: "translate-x-0", ruta: "/"},
+    {nombre: "Comic", icon: ImImages, dis: "translate-x-0", ruta: "/noticias"},
+    {nombre: "Noticias", icon: FaRegNewspaper, dis: "translate-x-16", ruta: "/Masonic"}
 ];
 
 const Menu = ({cambiarPagina, PaginaActual}) => {
