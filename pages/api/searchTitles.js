@@ -1,11 +1,19 @@
-import searchTitle from '../../services/searchTitle'
+import searchTitle from '../../services/searchTitle';
 
 export default async function handler(req, res) {
-    const {query: {q = ''}} = req
-    
-    const resultados = await searchTitle(q)
+    try {
+        const {
+            query: { q = '' },
+        } = req;
 
-    const respuesta = await resultados.results.map((x) => {return {id: x.id, title: x.title}})
+        const resultados = await searchTitle(q);
 
-    return res.status(200).json(respuesta)
+        const respuesta = await resultados.results.map((x) => {
+            return { id: x.id, title: x.title };
+        });
+
+        return res.status(200).json(respuesta);
+    } catch (e) {
+        return res.status(500).json(e);
+    }
 }
